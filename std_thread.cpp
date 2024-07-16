@@ -18,6 +18,11 @@ int main() {
     std::thread t1(print_block, 50, '*');
     std::thread t2(print_block, 50, '$');
 
+    // Make threads detachable so they can continue even after main exits
+    t1.detach();
+    t2.detach();
+
+    //Wait for the threads to finish if they are not detachable
     //t1.join();
     //t2.join();
 
