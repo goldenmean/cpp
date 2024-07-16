@@ -13,6 +13,9 @@ void *PrintHello(void *threadid)
    //tid = *(long*)threadid;
    //cout << "Hello World! Thread ID, " << tid << endl;
    cout << "Hello World! Thread " << std::flush << endl;
+   
+   //pthread_detach(pthread_self()); // Detach the current thread
+
    pthread_exit(NULL);
 }
 

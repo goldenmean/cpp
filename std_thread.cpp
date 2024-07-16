@@ -18,8 +18,8 @@ int main() {
     std::thread t1(print_block, 50, '*');
     std::thread t2(print_block, 50, '$');
 
-    t1.join();
-    t2.join();
+    //t1.join();
+    //t2.join();
 
     return 0;
 }
